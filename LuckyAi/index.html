@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You AI Voice-Agent | Autonomous Business Infrastructure & AI Employees</title>
+    <meta name="description" content="You AI Voice-Agent builds future-ready autonomous systems, AI employees, predictive revenue intelligence, and self-optimizing workflows for ambitious companies.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 3D Interactive Background -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-text">You AI Voice-Agent</span>
+                <span class="logo-dot"></span>
+            </a>
+            <nav class="nav">
+                <a href="#simulator" class="nav-link">Simulator</a>
+                <a href="#features" class="nav-link">System Features</a>
+                <a href="#vision" class="nav-link">Our Vision</a>
+            </nav>
+            <div class="system-status">
+                <span class="status-pulse"></span>
+                <span class="status-text">SYSTEM STATUS: ACTIVE</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section with Centerpiece Simulator -->
+        <section id="simulator" class="hero-section hero-centerpiece">
+            <div class="glow-orb orb-1"></div>
+            <div class="glow-orb orb-2"></div>
+            <div class="container hero-container">
+                <div class="hero-tag">FUTURE-READY SYSTEMS</div>
+                <h1 class="hero-title">Not Just Automation.<br><span class="gradient-text">Autonomous Business Infrastructure.</span></h1>
+                <p class="hero-subtitle">Deploy AI team members designed for where business is going next — answering calls, qualifying leads, and booking meetings automatically 24/7.</p>
+                
+                <!-- Centerpiece AI Voice-Agent Simulator Dashboard -->
+                <div class="simulator-dashboard glass-panel">
+                    <!-- Column 1: Live Voice Terminal -->
+                    <div class="sim-column voice-widget-col">
+                        <h3 class="panel-title"><span class="title-icon">📞</span> Voice Terminal</h3>
+                        <div class="voice-widget glass-inner">
+                            <div class="call-status-bar">
+                                <span class="call-badge" id="call-badge-status">Call Idle</span>
+                                <span class="call-timer" id="call-timer">00:00</span>
+                            </div>
+                            
+                            <div class="avatar-container">
+                                <!-- Customer Avatar -->
+                                <div class="avatar-wrapper" id="customer-avatar">
+                                    <div class="avatar-pulse"></div>
+                                    <div class="avatar">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                            <circle cx="12" cy="7" r="4" />
+                                        </svg>
+                                    </div>
+                                    <span class="avatar-label">Customer</span>
+                                </div>
+
+                                <!-- Soundwave Visualizer -->
+                                <div class="visualizer-container">
+                                    <div class="sound-wave" id="sound-wave">
+                                        <span class="wave-bar"></span>
+                                        <span class="wave-bar"></span>
+                                        <span class="wave-bar"></span>
+                                        <span class="wave-bar"></span>
+                                        <span class="wave-bar"></span>
+                                        <span class="wave-bar"></span>
+                                        <span class="wave-bar"></span>
+                                        <span class="wave-bar"></span>
+                                        <span class="wave-bar"></span>
+                                        <span class="wave-bar"></span>
+                                    </div>
+                                </div>
+
+                                <!-- AI Agent Avatar -->
+                                <div class="avatar-wrapper" id="ai-avatar">
+                                    <div class="avatar-pulse"></div>
+                                    <div class="avatar ai-variant">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                                            <path d="M12 2v2M8 5h8M12 11V9" />
+                                            <circle cx="8" cy="16" r="1" />
+                                            <circle cx="16" cy="16" r="1" />
+                                        </svg>
+                                    </div>
+                                    <span class="avatar-label">You AI Agent</span>
+                                </div>
+                            </div>
+
+                            <div class="call-actions">
+                                <button id="call-trigger-btn" class="call-btn btn-call-idle">
+                                    <span class="btn-icon">📞</span>
+                                    <span class="btn-text">Initiate Call Demo</span>
+                                </button>
+                                <p class="btn-hint">Simulate a customer call qualifying a lead & booking a meeting</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Live Transcript Stream -->
+                    <div class="sim-column transcript-col">
+                        <h3 class="panel-title"><span class="title-icon">📝</span> Real-Time Transcript</h3>
+                        <div class="transcript-box glass-inner" id="transcript-box">
+                            <div class="system-message">
+                                <span class="terminal-prefix">[SYSTEM]:</span> Ready for interaction. Click "Initiate Call Demo" above to start the live product qualification conversation.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 3: You AI CRM Hub -->
+                    <div class="sim-column crm-col">
+                        <h3 class="panel-title"><span class="title-icon">📊</span> You CRM Dashboard</h3>
+                        <div class="crm-box glass-inner">
+                            <div class="crm-header">
+                                <span class="crm-logo">YOU_CRM_DB_v2.0</span>
+                                <span class="crm-sync" id="crm-sync-status">OFFLINE</span>
+                            </div>
+                            
+                            <div class="crm-fields">
+                                <!-- Lead Score Module -->
+                                <div class="crm-lead-score-container">
+                                    <div class="lead-score-header">
+                                        <span class="lead-score-label">Lead Qualification Score</span>
+                                        <span class="lead-score-value" id="lead-score-text">0%</span>
+                                    </div>
+                                    <div class="lead-score-bar-bg">
+                                        <div class="lead-score-bar-fill" id="lead-score-fill"></div>
+                                    </div>
+                                </div>
+
+                                <div class="crm-field" id="crm-field-name">
+                                    <label>Customer Name</label>
+                                    <div class="value-placeholder">—</div>
+                                </div>
+                                <div class="crm-field" id="crm-field-company">
+                                    <label>Company Site</label>
+                                    <div class="value-placeholder">—</div>
+                                </div>
+                                <div class="crm-field" id="crm-field-phone">
+                                    <label>Contact Phone</label>
+                                    <div class="value-placeholder">—</div>
+                                </div>
+                                <div class="crm-field" id="crm-field-painpoint">
+                                    <label>Challenge Identified</label>
+                                    <div class="value-placeholder">—</div>
+                                </div>
+                                <div class="crm-field" id="crm-field-status">
+                                    <label>Lead Qualification</label>
+                                    <div class="value-placeholder status-unqualified">UNQUALIFIED</div>
+                                </div>
+                                <div class="crm-field" id="crm-field-booking">
+                                    <label>Calendar Booking</label>
+                                    <div class="value-placeholder">—</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Centerpiece Flow Checklist Indicator -->
+                <div class="flow-progression-container glass-panel">
+                    <div class="flow-step" id="step-call">
+                        <div class="step-indicator">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <div class="step-label">Call Answered</div>
+                    </div>
+                    <div class="flow-arrow">➔</div>
+                    <div class="flow-step" id="step-qualify">
+                        <div class="step-indicator">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <div class="step-label">Lead Qualified</div>
+                    </div>
+                    <div class="flow-arrow">➔</div>
+                    <div class="flow-step" id="step-crm">
+                        <div class="step-indicator">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <div class="step-label">CRM Updated</div>
+                    </div>
+                    <div class="flow-arrow">➔</div>
+                    <div class="flow-step" id="step-book">
+                        <div class="step-indicator">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <div class="step-label">Meeting Booked</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Grid Section -->
+        <section id="features" class="features-section">
+            <div class="glow-orb orb-3"></div>
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="section-tag">01 / SYSTEM MODULES</div>
+                    <h2 class="section-title">Autonomous Business Infrastructure</h2>
+                    <p class="section-subtitle">Deeply integrated AI engines designed to run operational workflows, automate human outreach, and forecast performance indicators.</p>
+                </div>
+
+                <div class="features-grid">
+                    <!-- Card 01 -->
+                    <div class="feature-card glass-panel" data-tilt>
+                        <div class="card-glow"></div>
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg>
+                        </div>
+                        <h3 class="card-title">AI Employees</h3>
+                        <p class="card-desc">Deploy autonomous team members who answer calls 24/7, handle client support requests, qualify inbound leads, schedule meetings, and continuously self-learn from customer interaction history.</p>
+                        <div class="card-result">
+                            <span class="result-label">Result:</span> Scale operations without increasing headcount.
+                        </div>
+                    </div>
+
+                    <!-- Card 02 -->
+                    <div class="feature-card glass-panel" data-tilt>
+                        <div class="card-glow"></div>
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="18" y1="20" x2="18" y2="10" />
+                                <line x1="12" y1="20" x2="12" y2="4" />
+                                <line x1="6" y1="20" x2="6" y2="14" />
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Predictive Revenue Intelligence</h3>
+                        <p class="card-desc">Analyze pipeline actions, landing page behavior, email response vectors, and campaign data to predict conversion probabilities, flag customer churn risks, and spot leakages before they affect revenue.</p>
+                        <div class="card-result">
+                            <span class="result-label">Result:</span> Smarter decisions before problems occur.
+                        </div>
+                    </div>
+
+                    <!-- Card 03 -->
+                    <div class="feature-card glass-panel" data-tilt>
+                        <div class="card-glow"></div>
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                                <line x1="12" y1="22.08" x2="12" y2="12" />
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Multi-Agent AI Ecosystem</h3>
+                        <p class="card-desc">Activate distinct AI roles—Sales, Customer Support, Operations, Marketing, and Executive Reporting—working concurrently and collaborating in real time over secure cross-agent communication buses.</p>
+                        <div class="card-result">
+                            <span class="result-label">Result:</span> A business that runs faster with less human intervention.
+                        </div>
+                    </div>
+
+                    <!-- Card 04 -->
+                    <div class="feature-card glass-panel" data-tilt>
+                        <div class="card-glow"></div>
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Autonomous Workflow Engine</h3>
+                        <p class="card-desc">Move beyond simple automation triggers. Systems autonomously identify integration friction points, initiate automated healing sequences, escalate anomalies, and self-optimize schedules.</p>
+                        <div class="card-result">
+                            <span class="result-label">Result:</span> Self-improving operations.
+                        </div>
+                    </div>
+
+                    <!-- Card 05 -->
+                    <div class="feature-card glass-panel" data-tilt>
+                        <div class="card-glow"></div>
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Omnichannel Communication Hub</h3>
+                        <p class="card-desc">Consolidate WhatsApp, Voice Calls, Email, SMS, Instagram, Messenger, and Web chat into a unified context-aware AI brain. Keep track of customer touchpoints without breaking dialogue context.</p>
+                        <div class="card-result">
+                            <span class="result-label">Result:</span> One conversation across every channel.
+                        </div>
+                    </div>
+
+                    <!-- Card 06 -->
+                    <div class="feature-card glass-panel" data-tilt>
+                        <div class="card-glow"></div>
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                                <line x1="9" y1="3" x2="9" y2="21" />
+                                <line x1="9" y1="9" x2="21" y2="9" />
+                                <line x1="9" y1="15" x2="21" y2="15" />
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Real-Time Command Center</h3>
+                        <p class="card-desc">Monitor revenue health metrics, pipeline velocity, active lead pathways, agent engagement levels, customer satisfaction scores, and agent task queues in an all-in-one low-latency telemetry cockpit.</p>
+                        <div class="card-result">
+                            <span class="result-label">Result:</span> Complete visibility over business growth.
+                        </div>
+                    </div>
+
+                    <!-- Card 07 -->
+                    <div class="feature-card glass-panel" data-tilt>
+                        <div class="card-glow"></div>
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2a10 10 0 1 0 10 10H12V2z" />
+                                <path d="M12 2a10 10 0 0 1 10 10h-10V2z" />
+                            </svg>
+                        </div>
+                        <h3 class="card-title">AI-Powered Personalization</h3>
+                        <p class="card-desc">Instantly customize onboarding documents, product recommendations, transactional email copywriting, interactive landing pages, and price structures according to client intent vectors.</p>
+                        <div class="card-result">
+                            <span class="result-label">Result:</span> Higher engagement and conversions.
+                        </div>
+                    </div>
+
+                    <!-- Card 08 -->
+                    <div class="feature-card glass-panel" data-tilt>
+                        <div class="card-glow"></div>
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16 18 22 12 16 6" />
+                                <polyline points="8 6 2 12 8 18" />
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Future-Proof Architecture</h3>
+                        <p class="card-desc">Constructed atop model-agnostic API nodes, enterprise LLM frameworks, ultra-low latency VoIP agents, cloud clusters, and modular connectors that easily adapt to new technological cycles.</p>
+                        <div class="card-result">
+                            <span class="result-label">Result:</span> Systems that stay relevant for years.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Anti-Gravity Vision Section -->
+        <section id="vision" class="vision-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="section-tag">02 / TRANSITION MODEL</div>
+                    <h2 class="section-title">The Anti-Gravity Vision</h2>
+                    <p class="section-subtitle">We guide ambitious organizations through the three stages of corporate efficiency. Stop looking for minor productivity boosts and start building autonomous networks.</p>
+                </div>
+
+                <!-- Vision Roadmap Pipeline -->
+                <div class="vision-pipeline glass-panel">
+                    <div class="pipeline-progress-bar">
+                        <div class="pipeline-progress-fill"></div>
+                    </div>
+                    
+                    <!-- Phase 1 -->
+                    <div class="pipeline-card active">
+                        <div class="pipeline-indicator">
+                            <div class="indicator-glow"></div>
+                        </div>
+                        <div class="pipeline-phase">TODAY</div>
+                        <h3 class="pipeline-title">Automate Tasks</h3>
+                        <p class="pipeline-desc">Standardizing repetitive routines. Setting up APIs and triggers so basic data syncs between departments without human hands.</p>
+                    </div>
+
+                    <!-- Phase 2 -->
+                    <div class="pipeline-card active">
+                        <div class="pipeline-indicator">
+                            <div class="indicator-glow"></div>
+                        </div>
+                        <div class="pipeline-phase">TOMORROW</div>
+                        <h3 class="pipeline-title">Automate Departments</h3>
+                        <p class="pipeline-desc">Connecting isolated processes into cooperative AI clusters. Sales, support, and marketing synchronize actions using multi-agent networks.</p>
+                    </div>
+
+                    <!-- Phase 3 -->
+                    <div class="pipeline-card active-future">
+                        <div class="pipeline-indicator">
+                            <div class="indicator-glow"></div>
+                        </div>
+                        <div class="pipeline-phase">THE FUTURE</div>
+                        <h3 class="pipeline-title">Self-Operating Businesses</h3>
+                        <p class="pipeline-desc">Full operational autonomy. Workflows self-diagnose, marketing budget allocations optimize dynamically, and AI employees expand capacity on-demand.</p>
+                    </div>
+                </div>
+
+                <div class="vision-conclusion glass-panel text-center">
+                    <p class="conclusion-text">Anti-Gravity helps ambitious companies transition from manual operations to intelligent, autonomous growth systems.</p>
+                    <a href="#simulator" class="btn btn-primary">Try the Simulator Now</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <span class="logo-text">You AI Voice-Agent</span>
+                <span class="footer-ver">V2.4</span>
+            </div>
+            <p class="footer-copy">&copy; 2026 Anti-Gravity Corporation. All rights reserved. Operating under autonomous business systems.</p>
+        </div>
+    </footer>
+
+    <!-- JS Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
